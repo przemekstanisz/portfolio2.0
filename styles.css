@@ -11,7 +11,7 @@
 }
 
 body {
-    border: 1px solid green;
+    max-width: 100vw;  
 }
 
 .hero {
@@ -21,7 +21,7 @@ body {
 }
 
 .hero_main {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -31,20 +31,11 @@ body {
     flex-direction: column;
 }
 
-
-.hero_aside {
-    
-}
-
-
 .hero_aside_sidebar {
-    display: flex;
-    padding: 0;
-    border: 1px solid red;
     font-family: 'Oswald', sans-serif;
-    font-size: 10rem;
+    font-size: 23vh;
     text-transform: uppercase;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    line-height: 1;
+    line-height: 73%;
 }
