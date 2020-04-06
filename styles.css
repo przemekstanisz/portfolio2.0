@@ -6,24 +6,47 @@
     box-sizing: border-box;
 }
 
+:root {
+    font-size: 16px;
+    line-height: 1;
+    --title-ff: 'Oswald', sans-serif;
+}
+
 .large-desktop {
     display: none;
 }
-
+/*
 body {
     max-width: 100vw;  
+    background-image: url('images/AU_FG_Texture-6.jpg');
+    background-position: center top;
+    overflow-x: hidden;
 }
 
 .hero {
     height: 100vh;
     display: flex;
     flex-direction: row;
+    border-bottom: 3px solid rgba(70, 70, 70, 1);
 }
 
 .hero_main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0 2rem 0 0;
+    border-right: 3px solid rgba(70, 70, 70, 1);
+}
+
+.hero_main_title_main {
+    color: white;
+    font-family: var(--title-ff);
+    font-size: 19vw;
+    text-align: right;
+    margin: 0 1rem 0;
+    line-height: 0;
+
+    
 }
 
 .hero_main_content {
@@ -32,10 +55,16 @@ body {
 }
 
 .hero_aside_sidebar {
-    font-family: 'Oswald', sans-serif;
-    font-size: 23vh;
+    font-family: var(--title-ff);
+    font-size: 18vh;
+    color: transparent;
     text-transform: uppercase;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     line-height: 73%;
+    margin: .5rem 1rem 0 0;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgba(70, 70, 70, 1);
 }
+
+*/
