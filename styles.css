@@ -18,8 +18,8 @@ font-family: 'Source Code Pro', monospace;
     font-size: 16px;
     color: var(--primary-text);
 
-    --header-fs: 3rem;
-    --menu-fs: 5rem;
+    --header-fs: 2.5rem;
+    --menu-fs: 3.5rem;
     --title-fs: 2.25rem;
     --button-fs: 1.2rem;
     --text-fs: .9rem;
@@ -93,7 +93,6 @@ button {
 /* HERO */
 
 .hero {
-    height: 100vh;
     border-bottom: 2px solid var(--lines);
 }
 
@@ -124,7 +123,6 @@ button {
 }
 
 .hero_content {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -218,7 +216,7 @@ button {
 
 .skills_panel_text {
     font-family: var(--text-ff);
-    font-size: var(--text-fs);
+    font-size: .8rem;
 }
 
 /* PROJECTS */
@@ -297,7 +295,7 @@ button {
 
 .contact_content_text {
     font-family: var(--text-ff);
-    font-size: 1.25rem;
+    font-size: var(--text-fs);
 }
 
 .contact_bottom-menu {
