@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 /*
 font-family: 'Oswald', sans-serif;
 font-family: 'Source Code Pro', monospace;
@@ -27,6 +27,7 @@ font-family: 'Source Code Pro', monospace;
 
     --title-ff: 'Oswald', sans-serif;
     --text-ff: 'Source Code Pro', monospace;
+    --section-title-ff: 'Nothing You Could Do', cursive;
 
     --title-fw: 400;
     --button-fw: 300;
@@ -34,7 +35,6 @@ font-family: 'Source Code Pro', monospace;
     --title-margin: 4rem 0;
 
     --primary-title: rgba(206, 99, 0, 1);
-    --secondary-title: rgba(206, 99, 0, .7);
     --primary-border: rgba(77, 77, 77, 1);
     --primary-text: rgba(169, 169, 169, 1);
     --secondary-text: rgba(202, 202, 202, 1);
@@ -42,8 +42,11 @@ font-family: 'Source Code Pro', monospace;
 }
 
 body {
+    /*
     background-image: url('images/background.jpg');
     background-position: right top;
+    */
+    background-color: rgba(20, 20, 20, 1);
 }
 
 main {
@@ -81,7 +84,7 @@ button {
 }
 
 .title {
-    font-family: var(--title-ff);
+    font-family: var(--section-title-ff);
     font-size: var(--title-fs);
     color: var(--primary-title);
     font-weight: var(--title-fw);
@@ -106,9 +109,12 @@ button {
 }
 
 .hero_title_main {
+    /*
     background: url('images/title-texture.jpg');
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    */
+    color: var(--secondary-text)
 }
 
 .hero_title_sub {
@@ -158,13 +164,10 @@ button {
 }
 
 .social-box_title {
-    color: var(--primary-title);
-    font-weight: 300;
-    font-size: 1.75rem;
-}
-
-.social-box_title_second-name {
-    font-weight: 700;
+    color: var(--primary-text);
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: var(--section-title-ff);
 }
 
 .social-box_el {
@@ -177,7 +180,7 @@ button {
 }
 
 .social-box_el_link {
-    font-size: var(--subtitle-fs);
+    font-size: 1.25rem;
     color: var(--secondary-text);
     margin: 0 0 0 1rem;
 }
@@ -216,7 +219,7 @@ button {
 
 .skills_panel_text {
     font-family: var(--text-ff);
-    font-size: .8rem;
+    font-size: .9rem;
 }
 
 /* PROJECTS */
@@ -256,7 +259,7 @@ button {
     font-family: var(--title-ff);
     font-size: var(--subtitle-fs);
     font-weight: 300;
-    color: var(--secondary-title);
+    color: var(--primary-title);
 }
 
 .projects_panel_content_description {
@@ -313,6 +316,7 @@ button {
     text-transform: uppercase;
     font-size: 1.2rem;
     margin: 0 0 1rem 0;
+    font-weight: 300;
 }
 
 .contact_copyright {
@@ -320,4 +324,16 @@ button {
     font-size: var(--text-fs);
     text-align: center;
     margin: 0 0 2rem 0;
+}
+
+/*============================================================================
+==============================================================================
+MEDIA
+==============================================================================
+============================================================================*/
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
 }
