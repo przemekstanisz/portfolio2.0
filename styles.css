@@ -234,15 +234,19 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: 1px solid red;
 }
 
 .projects_panel_img {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border: 2px solid green;
 }
 
 .projects_panel_img_link {
     width: 100%;
+    border: 2px solid pink;
 }
 
 .projects_panel_img_desktop {
@@ -250,7 +254,7 @@ button {
 }
 
 .projects_panel_img_mobile {
-    margin: -8rem 0 0 0;
+
 }
 
 .projects_panel_content {
@@ -346,6 +350,100 @@ MEDIA
 /* TABLET */
 
 @media (min-width: 768px) {
+
+    :root {
+        --header-fs: 3.5rem;
+        --menu-fs: 6rem;
+    }
+    
+    /* SOCIAL BOX */
+    
+            .social-box_title {
+                font-size: 2rem;
+            }
+        
+            .social-box_el_img {
+                width: 2rem;
+            }
+        
+            .social-box_el_link {
+                font-size: 1.5rem;
+            }
+    
+    /* ABOUT ME */
+    
+            .btn-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .top-btn {
+                margin: 0;
+            }
+
+            .btn-link {
+                margin: 0 1rem;
+            }
+
+    /* SKILLS */
+    
+            .skills_panel {
+                flex-direction: row;
+                align-items: center;
+            }
+    
+            .skills_panel_title {
+                width: 20%;
+            }
+    
+            .skills_panel_text {
+                font-family: var(--text-ff);
+                font-size: 1rem;
+            }
+    
+    /* PROJECTS */
+
+            .projects {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+    
+            .projects_panel {
+                width: 48%;
+            }
+
+    /* CONTACT */
+    
+            .contact_content{
+                flex-direction: row; 
+                width: 100%;
+            } 
+    
+            .contact_content_title {
+                margin: 0;
+                width: 20%;
+            }
+
+            .contact_content_text {
+                font-size: 1rem;
+            }
+    
+            .contact_bottom-menu {
+                flex-direction: row;
+                justify-content: space-evenly;
+                text-align: center;
+                width: 100%;
+            }
+
+}
+
+/* MEDIUM DESKTOP */
+
+@media (min-width: 992px) {
 
     :root {
         --header-fs: 3.5rem;
