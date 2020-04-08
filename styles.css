@@ -17,7 +17,7 @@ font-family: 'Source Code Pro', monospace;
     font-size: 16px;
     color: var(--primary-text);
 
-    --header-fs: 2.5rem;
+    --header-fs: 2rem;
     --menu-fs: 3.5rem;
     --title-fs: 2.25rem;
     --button-fs: 1.2rem;
@@ -69,6 +69,7 @@ a {
 }
 
 button {
+    display: block;
     width: 100%;
     max-width: 350px;
     min-width: 300px;
@@ -90,6 +91,7 @@ button {
     color: var(--primary-title);
     font-weight: var(--title-fw);
     margin: var(--title-margin);
+    width: 100%;
     text-transform: uppercase;
     text-align: center;
 }
@@ -179,11 +181,11 @@ button {
 }
 
 .social-box_el_img {
-    width: 2rem;
+    width: 1.5rem;
 }
 
 .social-box_el_link {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--secondary-text);
     margin: 0 0 0 1rem;
 }
@@ -231,6 +233,7 @@ button {
 .projects_panel {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .projects_panel_img {
@@ -280,9 +283,13 @@ button {
     margin: 0;
 }
 
+/* CONTACT */
+
 .contact_panel {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0 0 2rem 0;
 }
 
 .contact_content{
@@ -311,7 +318,7 @@ button {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 0 0 1rem 0;
+    margin: 0 0 3rem 0;
 }
 
 .bottom_menu_link {
@@ -327,7 +334,7 @@ button {
     font-family: var(--text-ff);
     font-size: var(--text-fs);
     text-align: center;
-    margin: 0 0 2rem 0;
+    margin: 0 0 4rem 0;
 }
 
 /*============================================================================
@@ -339,5 +346,89 @@ MEDIA
 /* TABLET */
 
 @media (min-width: 768px) {
+
+    :root {
+        --header-fs: 3.5rem;
+        --menu-fs: 6rem;
+    }
+    
+    /* SOCIAL BOX */
+    
+            .social-box_title {
+                font-size: 2rem;
+            }
+        
+            .social-box_el_img {
+                width: 2rem;
+            }
+        
+            .social-box_el_link {
+                font-size: 1.5rem;
+            }
+    
+    /* ABOUT ME */
+    
+            .btn-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .top-btn {
+                margin: 0;
+            }
+
+            .btn-link {
+                margin: 0 1rem;
+            }
+
+    /* SKILLS */
+    
+            .skills_panel {
+                flex-direction: row;
+                align-items: center;
+            }
+    
+            .skills_panel_title {
+                width: 20%;
+            }
+    
+            .skills_panel_text {
+                font-family: var(--text-ff);
+                font-size: 1rem;
+            }
+    
+    /* PROJECTS */
+
+            .projects {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+    
+            .projects_panel {
+                width: 48%;
+            }
+
+    /* CONTACT */
+    
+            .contact_content{
+                flex-direction: row; 
+                width: 100%;
+            } 
+    
+            .contact_content_title {
+                margin: 0;
+                width: 20%;
+            }
+    
+            .contact_bottom-menu {
+                flex-direction: row;
+                justify-content: space-evenly;
+                text-align: center;
+                width: 100%;
+            }
 
 }
