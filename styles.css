@@ -31,13 +31,15 @@ font-family: 'Source Code Pro', monospace;
     --title-fw: 400;
     --button-fw: 300;
 
-    --title-margin: 4rem 0;
+    --title-margin: 8rem 0;
 
     --primary-title: rgba(206, 99, 0, 1);
     --primary-border: rgba(77, 77, 77, 1);
     --primary-text: rgba(169, 169, 169, 1);
     --secondary-text: rgba(202, 202, 202, 1);
     --lines: rgba(150, 148, 148, 1);
+    --bg: rgba(20, 20, 20, 1);
+    --projects__panel-bg: rgb(32, 32, 32);
 }
 
 body {
@@ -45,7 +47,11 @@ body {
     background-image: url('images/background.jpg');
     background-position: right top;
     */
-    background-color: rgba(20, 20, 20, 1);
+    background-color: var(--bg);
+}
+
+.large-desktop {
+    display: none;
 }
 
 main {
@@ -192,6 +198,9 @@ button {
 
 /* ABOUT ME */
 
+.about-me_text-container {
+    margin: 0 0 2rem 0;
+}
 .about-me_text {
     font-family: var(--text-ff);
     font-size: var(--text-fs);
@@ -210,10 +219,7 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-.skills_panel > * {
-    margin: 0 0 2rem 0;
+    margin: 0 0 4rem 0;
 }
 
 .skills_panel_title {
@@ -221,6 +227,7 @@ button {
     font-family: var(--title-ff);
     font-weight: 300;
     color: var(--secondary-text);
+    margin: 0 0 2rem 0;
 }
 
 .skills_panel_text {
@@ -234,19 +241,19 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid red;
+    margin: 0 0 4rem 0;
 }
 
 .projects_panel_img {
     display: flex;
+    flex-direction: column;
     width: 100%;
     align-items: center;
-    border: 2px solid green;
+    margin: 0 0 1rem 0;
 }
 
 .projects_panel_img_link {
     width: 100%;
-    border: 2px solid pink;
 }
 
 .projects_panel_img_desktop {
@@ -254,7 +261,8 @@ button {
 }
 
 .projects_panel_img_mobile {
-
+    margin-top: -100%;
+    width: 35%;
 }
 
 .projects_panel_content {
@@ -262,15 +270,12 @@ button {
     flex-direction: column;
 }
 
-.projects_panel_content > * {
-    margin: 0 0 2rem 0;
-}
-
 .projects_panel_content_title {
     font-family: var(--title-ff);
     font-size: var(--subtitle-fs);
     font-weight: 300;
     color: var(--primary-title);
+    margin: 0 0 2rem 0;
 }
 
 .projects_panel_content_description {
@@ -286,29 +291,32 @@ button {
 .projects_panel_content_description_el:last-child {
     margin: 0;
 }
-
 /* CONTACT */
 
 .contact_panel {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 0 2rem 0;
+    margin: 0 0 4rem 0;
 }
 
-.contact_content{
+.contact_content {
     display: flex;
     flex-direction: column;   
     align-items: center; 
-    margin: 0 0 2rem 0;
+    margin: 0 0 4rem 0;
 } 
+
+.contact_content:last-child {
+    margin: 0;
+}
 
 .contact_content_title {
     font-size: var(--subtitle-fs);
     font-family: var(--title-ff);
     font-weight: 300;
     color: var(--secondary-text);
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
 }
 
 .contact_content_text {
@@ -322,7 +330,15 @@ button {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 0 0 3rem 0;
+    margin: 0 0 4rem 0;
+}
+
+.contact_bottom-menu_el {
+    margin: 0 0 1rem 0;
+}
+
+.contact_bottom-menu_el:last-child {
+    margin: 0;
 }
 
 .bottom_menu_link {
@@ -330,7 +346,6 @@ button {
     color: var(--primary-title);
     text-transform: uppercase;
     font-size: 1.2rem;
-    margin: 0 0 1rem 0;
     font-weight: 300;
 }
 
@@ -343,11 +358,9 @@ button {
 
 /*============================================================================
 ==============================================================================
-MEDIA
+MEDIA TABLET
 ==============================================================================
 ============================================================================*/
-
-/* TABLET */
 
 @media (min-width: 768px) {
 
@@ -391,6 +404,10 @@ MEDIA
             .skills_panel {
                 flex-direction: row;
                 align-items: center;
+            }
+
+            .skills_panel > * {
+                margin: 0;
             }
     
             .skills_panel_title {
@@ -439,94 +456,120 @@ MEDIA
                 width: 100%;
             }
 
+            .contact_bottom-menu_el {
+                margin: 0;
+            }
+
 }
 
-/* MEDIUM DESKTOP */
+/*============================================================================
+==============================================================================
+MEDIA MEDIUM DESKTOP
+==============================================================================
+============================================================================*/
 
 @media (min-width: 992px) {
 
-    :root {
-        --header-fs: 3.5rem;
-        --menu-fs: 6rem;
-    }
+                    :root {
+                        --header-fs: 5.5rem;
+                        --menu-fs: 7.5rem;
+                        
+                        --text-fs: 1rem;
+                        --title-fs: 2.5rem;
+                    }
+
+                    main {
+                        max-width: 800px;
+                        margin: 0 auto;    
+                    }
+
+                    .hero_content {
+                        flex-direction: row;
+                    }
+
+                    .hero_content_top-menu {
+                        order: 1;
+                    }
     
     /* SOCIAL BOX */
-    
-            .social-box_title {
-                font-size: 2rem;
-            }
-        
-            .social-box_el_img {
-                width: 2rem;
-            }
-        
-            .social-box_el_link {
-                font-size: 1.5rem;
-            }
+
+                    .social-box {
+                        order: 0;
+                        align-self: flex-end;
+                    }
     
     /* ABOUT ME */
-    
-            .btn-container {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
 
-            .top-btn {
-                margin: 0;
-            }
-
-            .btn-link {
-                margin: 0 1rem;
-            }
+                    .about-me_btn-container {
+                        margin: 2rem 0 0 0;
+                    }
 
     /* SKILLS */
     
-            .skills_panel {
-                flex-direction: row;
-                align-items: center;
-            }
-    
-            .skills_panel_title {
-                width: 20%;
-            }
-    
-            .skills_panel_text {
-                font-family: var(--text-ff);
-                font-size: 1rem;
-            }
-    
     /* PROJECTS */
 
-            .projects {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                align-items: flex-start;
-            }
+                    .projects {
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                    }
+
+                    .projects_panel {
+                        flex-direction: row;
+                        margin: 0 0 3rem 0;
+                    }
+
+                    .projects_panel_img {
+                        width: 60%;
+                        margin: 0 2rem 0 0;
+                    }
     
-            .projects_panel {
-                width: 48%;
-            }
+                    .projects_panel {
+                        width: 100%;
+                    }
 
     /* CONTACT */
-    
-            .contact_content{
-                flex-direction: row; 
-                width: 100%;
-            } 
-    
-            .contact_content_title {
-                margin: 0;
-                width: 20%;
-            }
-    
-            .contact_bottom-menu {
-                flex-direction: row;
-                justify-content: space-evenly;
-                text-align: center;
-                width: 100%;
-            }
+
+}
+
+/*============================================================================
+==============================================================================
+MEDIA LARGE DESKTOP
+==============================================================================
+============================================================================*/
+
+@media (min-width: 1600px) {
+
+    .large-desktop {
+        display: inline;
+    }
+
+    .hero {
+        height: 100vh;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    .hero_title {
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        width: 50%;
+        border: 1px solid red;
+    }
+
+    .hero_title_main {
+        margin: 0;
+    }
+
+    .hero_content {
+        flex-direction: row;
+        align-items: center;
+        width: 50%;
+    }
+
+    .social-box {
+        align-self: flex-end;
+    }
+
 
 }
