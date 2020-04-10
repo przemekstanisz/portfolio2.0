@@ -31,7 +31,7 @@ font-family: 'Source Code Pro', monospace;
     --title-fw: 400;
     --button-fw: 300;
 
-    --title-margin: 8rem 0;
+    --title-margin: 8rem 0 6rem 0;
 
     --primary-title: rgba(206, 99, 0, 1);
     --primary-border: rgba(77, 77, 77, 1);
@@ -151,13 +151,16 @@ button {
     list-style: none;
 }
 
+.hero_content_top-menu_el {
+    margin: 0 0 1rem 0;
+}
+
 .top_menu_link {
     font-family: var(--title-ff);
     font-size: var(--menu-fs);
     color: var(--primary-title);
     text-transform: uppercase;
     line-height: .9;
-    margin: 0 0 1rem 0;
 }
 
 /* SOCIAL BOX */
@@ -198,7 +201,7 @@ button {
 
 /* ABOUT ME */
 
-.about-me_text-container {
+.about-me_text-panel {
     margin: 0 0 2rem 0;
 }
 .about-me_text {
@@ -219,10 +222,16 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.skills_panel_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin: 0 0 4rem 0;
 }
 
-.skills_panel_title {
+.skills_panel_content_title {
     font-size: var(--subtitle-fs);
     font-family: var(--title-ff);
     font-weight: 300;
@@ -230,7 +239,7 @@ button {
     margin: 0 0 2rem 0;
 }
 
-.skills_panel_text {
+.skills_panel_content_text {
     font-family: var(--text-ff);
     font-size: .8rem;
 }
@@ -401,23 +410,23 @@ MEDIA TABLET
 
     /* SKILLS */
     
-            .skills_panel {
+            .skills_panel_content {
                 flex-direction: row;
                 align-items: center;
             }
-
-            .skills_panel > * {
+    
+            .skills_panel_content_title {
+                width: 20%;
                 margin: 0;
             }
     
-            .skills_panel_title {
-                width: 20%;
-            }
-    
-            .skills_panel_text {
+            .skills_panel_content_text {
                 font-family: var(--text-ff);
                 font-size: 1rem;
+                
             }
+
+
     
     /* PROJECTS */
 
@@ -539,9 +548,33 @@ MEDIA LARGE DESKTOP
 
 @media (min-width: 1600px) {
 
+    :root {
+        --header-fs: 5.25rem;
+        --menu-fs: 5rem;
+    }
+
     .large-desktop {
         display: inline;
     }
+
+    main {
+        max-width: 1400px;  
+    }
+
+    section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .panel {
+        width: 60%;
+    }
+
+    .title {
+        width: 20%;
+    }
+
+    /* HERO */
 
     .hero {
         height: 100vh;
@@ -553,22 +586,40 @@ MEDIA LARGE DESKTOP
         flex-direction: column;
         justify-content: center;
         border: none;
-        width: 50%;
-        border: 1px solid red;
+        width: 30%;
+        padding: 0;
     }
 
     .hero_title_main {
+        font-size: 12rem;
+        margin: 0;
+    }
+
+    .hero_title_sub {
         margin: 0;
     }
 
     .hero_content {
         flex-direction: row;
         align-items: center;
-        width: 50%;
+        width: 40%;
     }
+
+    .hero_content_top-menu_el:last-child {
+        margin: 0;
+    }
+
+    /* SOCIAL BOX */
 
     .social-box {
         align-self: flex-end;
+    }
+
+    /* ABOUT ME */
+
+    .btn-container {
+        flex-direction: column;
+        width: 20%;
     }
 
 
