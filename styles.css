@@ -98,7 +98,6 @@ button {
     font-weight: var(--title-fw);
     margin: var(--title-margin);
     width: 100%;
-    text-transform: uppercase;
     text-align: center;
 }
 
