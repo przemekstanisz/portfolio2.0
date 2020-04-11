@@ -31,14 +31,14 @@ font-family: 'Source Code Pro', monospace;
     --title-fw: 400;
     --button-fw: 300;
 
-    --title-margin: 8rem 0 6rem 0;
+    --title-margin: 8rem 0 4rem 0;
 
     --primary-title: rgba(206, 99, 0, 1);
     --primary-border: rgba(77, 77, 77, 1);
     --primary-text: rgba(169, 169, 169, 1);
     --secondary-text: rgba(202, 202, 202, 1);
     --lines: rgba(150, 148, 148, 1);
-    --bg: rgba(20, 20, 20, 1);
+    --bg: rgba(30, 30, 30, 1);
     --projects__panel-bg: rgb(32, 32, 32);
 }
 
@@ -200,6 +200,10 @@ button {
 }
 
 /* ABOUT ME */
+
+.first-title {
+    margin: 4rem 0;
+}
 
 .about-me_text-panel {
     margin: 0 0 2rem 0;
@@ -425,12 +429,10 @@ MEDIA TABLET
                 font-size: 1rem;
                 
             }
-
-
     
     /* PROJECTS */
 
-            .projects {
+            .projects-container {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -517,7 +519,7 @@ MEDIA MEDIUM DESKTOP
     
     /* PROJECTS */
 
-                    .projects {
+                    .projects-container {
                         flex-direction: column;
                         flex-wrap: nowrap;
                     }
@@ -561,7 +563,8 @@ MEDIA LARGE DESKTOP
         max-width: 1400px;  
     }
 
-    section {
+    section,
+    footer {
         flex-direction: row;
         align-items: flex-start;
     }
@@ -621,6 +624,12 @@ MEDIA LARGE DESKTOP
         flex-direction: column;
         width: 20%;
     }
+
+    /* SKILLS */
+
+    /* PROJECTS */
+
+    /* CONTACT */
 
 
 }
