@@ -120,13 +120,105 @@ button {
 }
 
 .hero_title_main {
-    /*
-    background: url('images/title-texture.jpg');
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    */
-    color: var(--secondary-text)
+    color: var(--secondary-text);
+    position: relative;
 }
+
+.hero_title_main::before,
+.hero_title_main::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: attr(data-text);
+}
+
+.hero_title_main::before {
+    color: purple;
+    z-index: -1;
+    animation: glitch01 .3s ease .3s infinite;
+}
+
+.hero_title_main::after {
+    color: cyan;
+    z-index: -2;
+    animation: glitch02 .3s ease infinite reverse;
+}
+
+@keyframes glitch01 {
+    0% {
+        transform: translate(-1px, 1px);
+    }
+    25% {
+        transform: translate(-2px, -2px);
+    }
+    50% {
+        transform: translate(1px, 1px);
+    }
+    75% {
+        transform: translate(1px, -2px);
+    }
+    100% {
+        transform: translate(-1px, 1px);
+    }
+}
+
+@keyframes glitch02 {
+    0% {
+        transform: translate(-1px, 1px);
+    }
+    25% {
+        transform: translate(-1px, -1px);
+    }
+    50% {
+        transform: translate(1px, 1px);
+    }
+    75% {
+        transform: translate(1px, -1px);
+    }
+    100% {
+        transform: translate(-1px, 1px);
+    }
+}
+
+/*
+@keyframes glitch01 {
+    0% {
+        transform: translate(-2px, 2px);
+    }
+    25% {
+        transform: translate(-4px, -4px);
+    }
+    50% {
+        transform: translate(2px, 2px);
+    }
+    75% {
+        transform: translate(2px, -4px);
+    }
+    100% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+@keyframes glitch02 {
+    0% {
+        transform: translate(-2px, 2px);
+    }
+    25% {
+        transform: translate(-2px, -2px);
+    }
+    50% {
+        transform: translate(2px, 2px);
+    }
+    75% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(-2px, 2px);
+    }
+}
+*/
 
 .hero_title_sub {
     text-transform: uppercase;
@@ -382,94 +474,93 @@ MEDIA TABLET
         --menu-fs: 6rem;
     }
     
-    /* SOCIAL BOX */
+/* SOCIAL BOX */
     
-            .social-box_title {
-                font-size: 2rem;
-            }
+    .social-box_title {
+        font-size: 2rem;
+    }
         
-            .social-box_el_img {
-                width: 2rem;
-            }
+    .social-box_el_img {
+        width: 2rem;
+    }
         
-            .social-box_el_link {
-                font-size: 1.5rem;
-            }
+    .social-box_el_link {
+        font-size: 1.5rem;
+    }
     
-    /* ABOUT ME */
+/* ABOUT ME */
     
-            .btn-container {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
+    .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-            .top-btn {
-                margin: 0;
-            }
+    .top-btn {
+        margin: 0;
+    }
 
-            .btn-link {
-                margin: 0 1rem;
-            }
+    .btn-link {
+        margin: 0 1rem;
+    }
 
-    /* SKILLS */
+/* SKILLS */
     
-            .skills_panel_content {
-                flex-direction: row;
-                align-items: center;
-            }
+    .skills_panel_content {
+        flex-direction: row;
+        align-items: center;
+    }
     
-            .skills_panel_content_title {
-                width: 20%;
-                margin: 0;
-            }
+    .skills_panel_content_title {
+        width: 20%;
+        margin: 0;
+    }
     
-            .skills_panel_content_text {
-                font-family: var(--text-ff);
-                font-size: 1rem;
-                
-            }
+    .skills_panel_content_text {
+        font-family: var(--text-ff);
+        font-size: 1rem;      
+    }
     
-    /* PROJECTS */
+/* PROJECTS */
 
-            .projects-container {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                align-items: flex-start;
-            }
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
     
-            .projects_panel {
-                width: 48%;
-            }
+    .projects_panel {
+        width: 48%;
+    }
 
-    /* CONTACT */
+/* CONTACT */
     
-            .contact_content{
-                flex-direction: row; 
-                width: 100%;
-            } 
+    .contact_content{
+        flex-direction: row; 
+        width: 100%;
+    } 
     
-            .contact_content_title {
-                margin: 0;
-                width: 20%;
-            }
+    .contact_content_title {
+        margin: 0;
+        width: 20%;
+    }
 
-            .contact_content_text {
-                font-size: 1rem;
-            }
+    .contact_content_text {
+        font-size: 1rem;
+    }
     
-            .contact_bottom-menu {
-                flex-direction: row;
-                justify-content: space-evenly;
-                text-align: center;
-                width: 100%;
-            }
+    .contact_bottom-menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+    }
 
-            .contact_bottom-menu_el {
-                margin: 0;
-            }
+    .contact_bottom-menu_el {
+        margin: 0;
+    }
 
 }
 
@@ -481,62 +572,62 @@ MEDIA MEDIUM DESKTOP
 
 @media (min-width: 992px) {
 
-                    :root {
-                        --header-fs: 5.5rem;
-                        --menu-fs: 7.5rem;
+    :root {
+        --header-fs: 5.5rem;
+        --menu-fs: 7.5rem;
                         
-                        --text-fs: 1rem;
-                        --title-fs: 2.5rem;
-                    }
+        --text-fs: 1rem;
+        --title-fs: 2.5rem;
+    }
 
-                    main {
-                        max-width: 800px;
-                        margin: 0 auto;    
-                    }
+    main {
+        max-width: 800px;
+        margin: 0 auto;    
+    }
 
-                    .hero_content {
-                        flex-direction: row;
-                    }
+    .hero_content {
+        flex-direction: row;
+    }
 
-                    .hero_content_top-menu {
-                        order: 1;
-                    }
+    .hero_content_top-menu {
+        order: 1;
+    }
     
     /* SOCIAL BOX */
 
-                    .social-box {
-                        order: 0;
-                        align-self: flex-end;
-                    }
+    .social-box {
+        order: 0;
+        align-self: flex-end;
+    }
     
     /* ABOUT ME */
 
-                    .about-me_btn-container {
-                        margin: 2rem 0 0 0;
-                    }
+    .about-me_btn-container {
+        margin: 2rem 0 0 0;
+    }
 
     /* SKILLS */
     
     /* PROJECTS */
 
-                    .projects-container {
-                        flex-direction: column;
-                        flex-wrap: nowrap;
-                    }
+    .projects-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 
-                    .projects_panel {
-                        flex-direction: row;
-                        margin: 0 0 3rem 0;
-                    }
+    .projects_panel {
+        flex-direction: row;
+        margin: 0 0 3rem 0;
+    }
 
-                    .projects_panel_img {
-                        width: 60%;
-                        margin: 0 2rem 0 0;
-                    }
+    .projects_panel_img {
+        width: 60%;
+        margin: 0 2rem 0 0;
+        }
     
-                    .projects_panel {
-                        width: 100%;
-                    }
+    .projects_panel {
+        width: 100%;
+    }
 
     /* CONTACT */
 
@@ -553,6 +644,8 @@ MEDIA LARGE DESKTOP
     :root {
         --header-fs: 5.25rem;
         --menu-fs: 5rem;
+
+        --title-margin: 0 4rem 0 0;
     }
 
     .large-desktop {
@@ -567,6 +660,7 @@ MEDIA LARGE DESKTOP
     footer {
         flex-direction: row;
         align-items: flex-start;
+        margin: 16rem 0 0 0;
     }
 
     .panel {
@@ -575,6 +669,7 @@ MEDIA LARGE DESKTOP
 
     .title {
         width: 20%;
+        text-align: right;
     }
 
     /* HERO */
@@ -620,16 +715,48 @@ MEDIA LARGE DESKTOP
 
     /* ABOUT ME */
 
+    .first-title {
+        margin: var(--title-margin);
+    }
+
+    .about-me_text-panel {
+        margin: 0;
+    }
+
+    .about-me_text:last-child {
+        margin: 0;
+    }
+
     .btn-container {
         flex-direction: column;
         width: 20%;
+        margin: 0 0 0 4rem;
+    }
+
+    .about-me_btn-container {
+        margin: 0 0 0 4rem;
+    }
+
+    .top-btn {
+        margin: 0 0 2rem 0;
+    }    
+
+    .btn-link {
+        margin: 0;
     }
 
     /* SKILLS */
 
+    .skills_panel_content:last-child {
+        margin: 0;
+    }
+
     /* PROJECTS */
 
-    /* CONTACT */
+    .projects_panel:last-child {
+        margin: 0;
+    }
 
+    /* CONTACT */
 
 }
