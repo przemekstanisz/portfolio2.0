@@ -89,6 +89,12 @@ button {
     border-radius: 10px;
     background-color: transparent;
     cursor: pointer;
+    transition: background-color 400ms ease-in, color 400ms ease-in;
+}
+
+button:hover {
+    background-color: var(--primary-title);
+    color: var(--bg);
 }
 
 .title {
@@ -104,9 +110,11 @@ button {
 /* HERO/HEADER */
 
 .hero {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     border-bottom: 2px solid var(--lines);
+    justify-content: space-between;
 }
 
 .hero_title {
@@ -120,65 +128,6 @@ button {
 
 .hero_title_main {
     color: var(--secondary-text);
-    position: relative;
-}
-
-.hero_title_main::before,
-.hero_title_main::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: attr(data-text);
-}
-
-.hero_title_main::before {
-    color: purple;
-    z-index: -1;
-    animation: glitch01 .3s ease .3s infinite;
-}
-
-.hero_title_main::after {
-    color: cyan;
-    z-index: -2;
-    animation: glitch02 .3s ease infinite reverse;
-}
-
-@keyframes glitch01 {
-    0% {
-        transform: translate(-1px, 1px);
-    }
-    25% {
-        transform: translate(-2px, -2px);
-    }
-    50% {
-        transform: translate(1px, 1px);
-    }
-    75% {
-        transform: translate(1px, -2px);
-    }
-    100% {
-        transform: translate(-1px, 1px);
-    }
-}
-
-@keyframes glitch02 {
-    0% {
-        transform: translate(-1px, 1px);
-    }
-    25% {
-        transform: translate(-1px, -1px);
-    }
-    50% {
-        transform: translate(1px, 1px);
-    }
-    75% {
-        transform: translate(1px, -1px);
-    }
-    100% {
-        transform: translate(-1px, 1px);
-    }
 }
 
 /*
@@ -221,8 +170,69 @@ button {
 
 .hero_title_sub {
     text-transform: uppercase;
-    -webkit-text-stroke: 2px var(--primary-border);
+    -webkit-text-stroke: .5px var(--primary-border);
     color: transparent;
+    position: relative;
+}
+
+.hero_title_sub::before,
+.hero_title_sub::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: attr(data-text);
+}
+
+.hero_title_sub::before {
+    -webkit-text-stroke: 1px purple;
+    color: transparent;
+    z-index: -1;
+    animation: glitch01 300ms ease 300ms infinite;
+}
+
+.hero_title_sub::after {
+    -webkit-text-stroke: .5px cyan;
+    color: transparent;
+    z-index: -2;
+    animation: glitch02 300ms ease infinite reverse;
+}
+
+@keyframes glitch01 {
+    0% {
+        transform: translate(-.5px, .5px);
+    }
+    25% {
+        transform: translate(-1px, -1px);
+    }
+    50% {
+        transform: translate(.5px, .5px);
+    }
+    75% {
+        transform: translate(.5px, -1px);
+    }
+    100% {
+        transform: translate(-.5px, .5px);
+    }
+}
+
+@keyframes glitch02 {
+    0% {
+        transform: translate(-.5px, .5px);
+    }
+    25% {
+        transform: translate(-.5px, -.5px);
+    }
+    50% {
+        transform: translate(.5px, .5px);
+    }
+    75% {
+        transform: translate(.5px, -.5px);
+    }
+    100% {
+        transform: translate(-.5px, .5px);
+    }
 }
 
 .hero_title_sub,
@@ -230,10 +240,13 @@ button {
     font-weight: var(--title-fw);
 }
 
+/* MENU */
+
 .hero_content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
 .hero_content_top-menu {
@@ -252,6 +265,11 @@ button {
     color: var(--primary-title);
     text-transform: uppercase;
     line-height: .9;
+    transition: transform 1s;
+}
+
+.top_menu_link:hover {
+    transform: translateX(-20px);
 }
 
 /* SOCIAL BOX */
@@ -395,6 +413,7 @@ button {
 .projects_panel_content_description_el:last-child {
     margin: 0;
 }
+
 /* CONTACT */
 
 .contact_panel {
@@ -582,6 +601,18 @@ MEDIA MEDIUM DESKTOP
     main {
         max-width: 800px;
         margin: 0 auto;    
+    }
+
+    .hero_title_sub {
+        -webkit-text-stroke: 2px var(--primary-border);
+    }
+    
+    .hero_title_sub::before {
+        -webkit-text-stroke: 2px purple;
+    }
+    
+    .hero_title_sub::after {
+        -webkit-text-stroke: 1px cyan;
     }
 
     .hero_content {
