@@ -414,7 +414,18 @@ button:hover {
     margin: 0;
 }
 
+.projects_link {
+    transition: color 400ms ease-in;
+}
+.projects_link:hover {
+    color: var(--primary-title);
+}
+
 /* CONTACT */
+
+.footer_content {
+    width: 100%;
+}
 
 .contact_panel {
     display: flex;
@@ -466,10 +477,15 @@ button:hover {
 
 .bottom_menu_link {
     font-family: var(--title-ff);
-    color: var(--primary-title);
+    color: rgba(206, 99, 0, .6);
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 300;
+    transition: color 300ms ease-in;
+}
+
+.bottom_menu_link:hover {
+    color: var(--primary-title);
 }
 
 .contact_copyright {
@@ -654,6 +670,10 @@ MEDIA MEDIUM DESKTOP
         width: 60%;
         margin: 0 2rem 0 0;
         }
+
+    .projects_panel_content {
+        width: 40%;
+    }
     
     .projects_panel {
         width: 100%;
@@ -690,6 +710,7 @@ MEDIA LARGE DESKTOP
     footer {
         flex-direction: row;
         align-items: flex-start;
+        justify-content: flex-start;
         margin: 16rem 0 0 0;
     }
 
@@ -787,6 +808,22 @@ MEDIA LARGE DESKTOP
         margin: 0;
     }
 
+    .projects_link {
+        transition: color ;
+    }
+
     /* CONTACT */
+
+    .footer_content {
+        width: 60%;
+    }
+
+    .footer_content {
+        margin: 0 0 4rem 0;
+    }
+
+    .contact_bottom-menu {
+        margin: 0 0 8rem 0;
+    }
 
 }

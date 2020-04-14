@@ -1,3 +1,8 @@
+<!--
+- ujednolicić rozmiar img w @992
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +15,18 @@
 </head>
 <body>
 
-<header class="hero">
+<header class="hero" id="home">
     <div class="hero_title">
         <h1 class="hero_title_main" data-text="...frontend">...frontend</h1>
         <h1 class="hero_title_sub" data-text="dev">dev<span class="large-desktop">eloper</span></h1>
     </div>
     <div class="hero_content">
         <ul class="hero_content_top-menu">
-            <li class="hero_content_top-menu_el"><a href="" class="top_menu_link">home</a></li>
-            <li class="hero_content_top-menu_el"><a href="" class="top_menu_link">about me</a></li>
-            <li class="hero_content_top-menu_el"><a href="" class="top_menu_link">skills</a></li>
-            <li class="hero_content_top-menu_el"><a href="" class="top_menu_link">projects</a></li>
-            <li class="hero_content_top-menu_el"><a href="" class="top_menu_link">contact</a></li>
+            <li class="hero_content_top-menu_el"><a href="#home" class="top_menu_link">home</a></li>
+            <li class="hero_content_top-menu_el"><a href="#about" class="top_menu_link">about me</a></li>
+            <li class="hero_content_top-menu_el"><a href="#skills" class="top_menu_link">skills</a></li>
+            <li class="hero_content_top-menu_el"><a href="#projects" class="top_menu_link">projects</a></li>
+            <li class="hero_content_top-menu_el"><a href="#contact" class="top_menu_link">contact</a></li>
         </ul>
         <div class="social-box">
             <h1 class="social-box_title">Przemek Stanisz</h1>
@@ -33,7 +38,7 @@
     </div>
 </header>
 <main class="main">
-    <section class="about-me">
+    <section class="about-me" id="about">
         <h2 class="about-me_title title first-title">about me</h2>
         <div class="about-me_text-panel panel">
             <p class="about-me_text">Przemek jest junior web designerem, który z pasją realizuje różnorodne projekty. Zanim odkrył w sobie zamiłowanie do designu, z powodzeniem i uznaniem służył 10 lat w charakterze lidera wojskowego. Jako swoje flagowe osiągnięcie traktuje wyszkolenie w ciągu 5 lat, 143 oficerów - dowódców wojskowych na potrzeby Sił Zbrojnych RP.</p>
@@ -51,11 +56,11 @@
             <p class="about-me_text">Obecnie intensywnie uczy się języka Javascript, pracuje nad nowym portfolio i eksperymentuje z copywritingiem.</p>
         </div>
         <div class="btn-container about-me_btn-container">
-            <a href="" class="btn-link"><button href="" class="btn top-btn">my projects</button></a>
-            <a href="" class="btn-link"><button class="btn">my resume</button></a>
+            <a href="#projects" class="btn-link"><button href="" class="btn top-btn">my projects</button></a>
+            <a href="/PrzemyslawStaniszResume.pdf" class="btn-link" target="blank"><button class="btn">my resume</button></a>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
         <h2 class="skills_title title">skills</h2>
         <div class="skills_panel panel">
             <div class="skills_panel_content">
@@ -76,99 +81,100 @@
             </div>
         </div>
         <div class="btn-container skills_btn-container">
-            <a href="" class="btn-link"><button class="btn">my roadmap</button></a>
+            <a href="https://roadmap.sh/frontend" class="btn-link" target="blank"><button class="btn">my roadmap</button></a>
         </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
         <h2 class="projects_title title">projects</h2>
         <div class="projects-container">
             <div class="projects_panel">
                 <div class="projects_panel_img">
-                    <a href="" class="projects_panel_img_link"><img src="images/garena-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
-                    <a href="" class="projects_panel_img_link"><img src="images/garena-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
+                    <a href="https://przemekstanisz.github.io/Garena/" class="projects_panel_img_link" target="blank"><img src="images/garena-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
+                    <a href="https://przemekstanisz.github.io/Garena/" class="projects_panel_img_link" target="blank"><img src="images/garena-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
                 </div>
                 <div class="projects_panel_content">
                     <h3 class="projects_panel_content_title">gladiator arena</h3>
                     <ul class="projects_panel_content_description">
-                        <li class="projects_panel_content_description_el">website project for fitness club</li>
-                        <li class="projects_panel_content_description_el">fully responsive - created for mobile and desktop</li>
+                        <li class="projects_panel_content_description_el">my first project</li>
+                        <li class="projects_panel_content_description_el">website for fitness club</li>
+                        <li class="projects_panel_content_description_el">pretty responsive - created for mobile and desktop</li>
                         <li class="projects_panel_content_description_el">designed with figma</li>
-                        <li class="projects_panel_content_description_el"><a href="" class="projects_link">check github</a></li>
+                        <li class="projects_panel_content_description_el"><a href="https://github.com/przemekstanisz/Garena" class="projects_link" target="blank">check github</a></li>
                     </ul>
                 </div>
             </div>
             <div class="projects_panel">
                 <div class="projects_panel_img">
-                    <a href="" class="projects_panel_img_link"><img src="images/garena2.0-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
-                    <a href="" class="projects_panel_img_link"><img src="images/garena2.0-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
+                    <a href="https://przemekstanisz.github.io/Garena2.0/" class="projects_panel_img_link" target="blank"><img src="images/garena2.0-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
+                    <a href="https://przemekstanisz.github.io/Garena2.0/" class="projects_panel_img_link" target="blank"><img src="images/garena2.0-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
                 </div>
                 <div class="projects_panel_content">
                     <h3 class="projects_panel_content_title">gladiator arena 2.0</h3>
                     <ul class="projects_panel_content_description">
-                        <li class="projects_panel_content_description_el">website project for fitness club</li>
-                        <li class="projects_panel_content_description_el">fully responsive - created for mobile and desktop</li>
+                        <li class="projects_panel_content_description_el">redesigned website project for fitness club</li>
+                        <li class="projects_panel_content_description_el">fully responsive - created for mobile phones, tablets and desktops</li>
+                        <li class="projects_panel_content_description_el">dedicated mobile look</li>
                         <li class="projects_panel_content_description_el">designed with figma</li>
-                        <li class="projects_panel_content_description_el"><a href="" class="projects_link">check github</a></li>
+                        <li class="projects_panel_content_description_el"><a href="https://github.com/przemekstanisz/Garena2.0" class="projects_link" target="blank">check github</a></li>
                     </ul>
                 </div>
             </div>
             <div class="projects_panel">
                 <div class="projects_panel_img">
-                    <a href="" class="projects_panel_img_link"><img src="images/socceracademy-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
-                    <a href="" class="projects_panel_img_link"><img src="" alt="" class="projects_panel_img_mobile"></a>
+                    <a href="https://przemekstanisz.github.io/soccer-academy/" class="projects_panel_img_link" target="blank"><img src="images/socceracademy-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
+                    <a href="https://przemekstanisz.github.io/soccer-academy/" class="projects_panel_img_link" target="blank"><img src="" alt="" class="projects_panel_img_mobile"></a>
                 </div>
                 <div class="projects_panel_content">
                     <h3 class="projects_panel_content_title">soccer academy</h3>
                     <ul class="projects_panel_content_description">
-                        <li class="projects_panel_content_description_el">website project for fitness club</li>
-                        <li class="projects_panel_content_description_el">fully responsive - created for mobile and desktop</li>
+                        <li class="projects_panel_content_description_el">landing page concept for soccer academy</li>
                         <li class="projects_panel_content_description_el">designed with figma</li>
-                        <li class="projects_panel_content_description_el"><a href="" class="projects_link">check github</a></li>
+                        <li class="projects_panel_content_description_el"><a href="https://github.com/przemekstanisz/soccer-academy" class="projects_link" target="blank">check github</a></li>
                     </ul>
                 </div>
             </div>
             <div class="projects_panel">
                 <div class="projects_panel_img">
-                    <a href="" class="projects_panel_img_link"><img src="images/socceracademy2.0-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
-                    <a href="" class="projects_panel_img_link"><img src="images/socceracademy2.0-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
+                    <a href="https://przemekstanisz.github.io/soccer-academy2.0/" class="projects_panel_img_link" target="blank"><img src="images/socceracademy2.0-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
+                    <a href="https://przemekstanisz.github.io/soccer-academy2.0/" class="projects_panel_img_link" target="blank"><img src="images/socceracademy2.0-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
                 </div>
                 <div class="projects_panel_content">
                     <h3 class="projects_panel_content_title">soccer academy 2.0</h3>
                     <ul class="projects_panel_content_description">
-                        <li class="projects_panel_content_description_el">website project for fitness club</li>
+                        <li class="projects_panel_content_description_el">redesigned website project for soccer academy</li>
                         <li class="projects_panel_content_description_el">fully responsive - created for mobile and desktop</li>
+                        <li class="projects_panel_content_description_el">dedicated mobile look</li>
                         <li class="projects_panel_content_description_el">designed with figma</li>
-                        <li class="projects_panel_content_description_el"><a href="" class="projects_link">check github</a></li>
+                        <li class="projects_panel_content_description_el"><a href="https://github.com/przemekstanisz/soccer-academy2.0" class="projects_link" target="blank">check github</a></li>
                     </ul>
                 </div>
             </div>
             <div class="projects_panel">
                 <div class="projects_panel_img">
-                    <a href="" class="projects_panel_img_link"><img src="images/peneltyshootout-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
-                    <a href="" class="projects_panel_img_link"><img src="" alt="" class="projects_panel_img_mobile"></a>
+                    <a href="https://przemekstanisz.github.io/penelty-shootout/" class="projects_panel_img_link" target="blank"><img src="images/peneltyshootout-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
+                    <a href="https://przemekstanisz.github.io/penelty-shootout/" class="projects_panel_img_link" target="blank"><img src="" alt="" class="projects_panel_img_mobile"></a>
                 </div>
                 <div class="projects_panel_content">
                     <h3 class="projects_panel_content_title">penelty shootout</h3>
                     <ul class="projects_panel_content_description">
-                        <li class="projects_panel_content_description_el">website project for fitness club</li>
-                        <li class="projects_panel_content_description_el">fully responsive - created for mobile and desktop</li>
-                        <li class="projects_panel_content_description_el">designed with figma</li>
-                        <li class="projects_panel_content_description_el"><a href="" class="projects_link">check github</a></li>
+                        <li class="projects_panel_content_description_el">my first project in JS development</li>
+                        <li class="projects_panel_content_description_el"><a href="https://github.com/przemekstanisz/penelty-shootout" class="projects_link" target="blank">check github</a></li>
                     </ul>
                 </div>
             </div>
             <div class="projects_panel">
                 <div class="projects_panel_img">
-                    <a href="" class="projects_panel_img_link"><img src="images/tennisacademy-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
-                    <a href="" class="projects_panel_img_link"><img src="images/tennisacademy-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
+                    <a href="https://przemekstanisz.github.io/tenis-club/" class="projects_panel_img_link" target="blank"><img src="images/tennisacademy-desktop.svg" alt="" class="projects_panel_img_desktop"></a>
+                    <a href="https://przemekstanisz.github.io/tenis-club/" class="projects_panel_img_link" target="blank"><img src="images/tennisacademy-mobile.svg" alt="" class="projects_panel_img_mobile"></a>
                 </div>
                 <div class="projects_panel_content">
                     <h3 class="projects_panel_content_title">tennis academy</h3>
                     <ul class="projects_panel_content_description">
-                        <li class="projects_panel_content_description_el">website project for fitness club</li>
+                        <li class="projects_panel_content_description_el">website project for tennis club</li>
                         <li class="projects_panel_content_description_el">fully responsive - created for mobile and desktop</li>
+                        <li class="projects_panel_content_description_el">dedicated mobile look</li>
                         <li class="projects_panel_content_description_el">designed with figma</li>
-                        <li class="projects_panel_content_description_el"><a href="" class="projects_link">check github</a></li>
+                        <li class="projects_panel_content_description_el"><a href="https://github.com/przemekstanisz/tenis-club" class="projects_link" target="blank">check github</a></li>
                     </ul>
                 </div>
             </div>
@@ -177,7 +183,7 @@
             <a href="" class="btn-link"><button class="btn">my github</button></a>
         </div>
     </section>
-    <footer class="contact">
+    <footer class="contact" id="contact">
         <h2 class="contact_title title">contact</h2>
         <div class="footer_content panel">
             <div class="contact_panel">
@@ -199,11 +205,11 @@
                 </div>
             </div>
             <ul class="contact_bottom-menu">
-                <li class="contact_bottom-menu_el"><a href="" class="bottom_menu_link">home</a></li></li>
-                <li class="contact_bottom-menu_el"><a href="" class="bottom_menu_link">about me</a></li>
-                <li class="contact_bottom-menu_el"><a href="" class="bottom_menu_link">skills</a></li>
-                <li class="contact_bottom-menu_el"><a href="" class="bottom_menu_link">projects</a></li>
-                <li class="contact_bottom-menu_el"><a href="" class="bottom_menu_link">contact</a></li>
+                <li class="contact_bottom-menu_el"><a href="#home" class="bottom_menu_link">home</a></li></li>
+                <li class="contact_bottom-menu_el"><a href="#about" class="bottom_menu_link">about me</a></li>
+                <li class="contact_bottom-menu_el"><a href="#skills" class="bottom_menu_link">skills</a></li>
+                <li class="contact_bottom-menu_el"><a href="#projects" class="bottom_menu_link">projects</a></li>
+                <li class="contact_bottom-menu_el"><a href="#contact" class="bottom_menu_link">contact</a></li>
             </ul>
             <p class="contact_copyright">copyright 2020 Przemysław Stanisz</p>
         </div>
