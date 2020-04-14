@@ -43,11 +43,11 @@ font-family: 'Source Code Pro', monospace;
 }
 
 body {
-    /*
-    background-image: url('images/background.jpg');
-    background-position: right top;
-    */
+    background-image: url('images/bg.jpg');
+    background-size: contain;
+    background-position: top left;
     background-color: var(--bg);
+    background-blend-mode: darken;
 }
 
 .large-desktop {
@@ -87,7 +87,7 @@ button {
     padding: 1.25rem;
     border: 1px solid var(--primary-text);
     border-radius: 10px;
-    background-color: transparent;
+    background-color: rgba(77, 77, 77, .2);;
     cursor: pointer;
     transition: background-color 400ms ease-in, color 400ms ease-in;
 }
@@ -130,48 +130,10 @@ button:hover {
     color: var(--secondary-text);
 }
 
-/*
-@keyframes glitch01 {
-    0% {
-        transform: translate(-2px, 2px);
-    }
-    25% {
-        transform: translate(-4px, -4px);
-    }
-    50% {
-        transform: translate(2px, 2px);
-    }
-    75% {
-        transform: translate(2px, -4px);
-    }
-    100% {
-        transform: translate(-2px, 2px);
-    }
-}
-
-@keyframes glitch02 {
-    0% {
-        transform: translate(-2px, 2px);
-    }
-    25% {
-        transform: translate(-2px, -2px);
-    }
-    50% {
-        transform: translate(2px, 2px);
-    }
-    75% {
-        transform: translate(2px, -2px);
-    }
-    100% {
-        transform: translate(-2px, 2px);
-    }
-}
-*/
-
 .hero_title_sub {
     text-transform: uppercase;
     -webkit-text-stroke: .5px var(--primary-border);
-    color: transparent;
+    color: rgba(77, 77, 77, .1);;
     position: relative;
 }
 
@@ -201,37 +163,37 @@ button:hover {
 
 @keyframes glitch01 {
     0% {
-        transform: translate(-.5px, .5px);
-    }
-    25% {
-        transform: translate(-1px, -1px);
-    }
-    50% {
-        transform: translate(.5px, .5px);
-    }
-    75% {
-        transform: translate(.5px, -1px);
-    }
-    100% {
-        transform: translate(-.5px, .5px);
-    }
-}
-
-@keyframes glitch02 {
-    0% {
-        transform: translate(-.5px, .5px);
+        transform: translate(-.25px, .25px);
     }
     25% {
         transform: translate(-.5px, -.5px);
     }
     50% {
-        transform: translate(.5px, .5px);
+        transform: translate(.25px, .25px);
     }
     75% {
-        transform: translate(.5px, -.5px);
+        transform: translate(.25px, -.5px);
     }
     100% {
-        transform: translate(-.5px, .5px);
+        transform: translate(-.25px, .25px);
+    }
+}
+
+@keyframes glitch02 {
+    0% {
+        transform: translate(-.25px, .25px);
+    }
+    25% {
+        transform: translate(-.25px, -.25px);
+    }
+    50% {
+        transform: translate(.25px, .25px);
+    }
+    75% {
+        transform: translate(.25px, -.25px);
+    }
+    100% {
+        transform: translate(-.25px, .25px);
     }
 }
 
@@ -617,6 +579,42 @@ MEDIA MEDIUM DESKTOP
     main {
         max-width: 800px;
         margin: 0 auto;    
+    }
+
+    @keyframes glitch01 {
+        0% {
+            transform: translate(-.5px, .5px);
+        }
+        25% {
+            transform: translate(-1px, -1px);
+        }
+        50% {
+            transform: translate(.5px, .5px);
+        }
+        75% {
+            transform: translate(.5px, -1px);
+        }
+        100% {
+            transform: translate(-.5px, .5px);
+        }
+    }
+    
+    @keyframes glitch02 {
+        0% {
+            transform: translate(-.5px, .5px);
+        }
+        25% {
+            transform: translate(-.5px, -.5px);
+        }
+        50% {
+            transform: translate(.5px, .5px);
+        }
+        75% {
+            transform: translate(.5px, -.5px);
+        }
+        100% {
+            transform: translate(-.5px, .5px);
+        }
     }
 
     .hero_title_sub {
