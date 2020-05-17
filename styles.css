@@ -316,7 +316,13 @@ button:hover {
 
 .skills_panel_content_text {
     font-family: var(--text-ff);
-    font-size: .8rem;
+    font-size: 1.25rem;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.skills_panel_content_text:last-child {
+    margin-bottom: 0;
 }
 
 /* PROJECTS */
@@ -418,6 +424,7 @@ button:hover {
 .contact_content_text {
     font-family: var(--text-ff);
     font-size: var(--text-fs);
+    font-style: italic;
 }
 
 .contact_bottom-menu {
@@ -467,7 +474,11 @@ MEDIA TABLET
 
     :root {
         --header-fs: 3.5rem;
-        --menu-fs: 6rem;
+        --menu-fs: 5rem;
+    }
+
+    .hero {
+        height: fit-content;
     }
     
 /* SOCIAL BOX */
@@ -514,7 +525,8 @@ MEDIA TABLET
     
     .skills_panel_content_text {
         font-family: var(--text-ff);
-        font-size: 1rem;      
+        font-size: 1.25rem;     
+        margin: 0; 
     }
     
 /* PROJECTS */
@@ -544,7 +556,7 @@ MEDIA TABLET
     }
 
     .contact_content_text {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
     
     .contact_bottom-menu {
@@ -569,8 +581,8 @@ MEDIA MEDIUM DESKTOP
 @media (min-width: 992px) {
 
     :root {
-        --header-fs: 5.5rem;
-        --menu-fs: 7.5rem;
+        --header-fs: 4.5rem;
+        --menu-fs: 5rem;
                         
         --text-fs: 1rem;
         --title-fs: 2.5rem;
